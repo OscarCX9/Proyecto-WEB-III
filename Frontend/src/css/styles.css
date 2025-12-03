@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #39ff14;
+}
+
+.description h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.description p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header-container {
+    background-color: #303331;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../fondo.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 208vh;
+    padding-top: 91px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 10px;
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.logos img {
+    width: 100%;
+    max-width: 550px;
+}
+
+.description {
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    margin-right: 120px;
+}
+
+.description2 {
+    text-align: right;
+    color: white;
+    max-width: 400px;
+    margin-right: 60px;
+}
+nav a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:active {
+    color: #050505;
+}
+
+.login-button {
+    background-color: white;
+    color: #60c0f5;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:active {
+    background-color: #6b6f7a;
+    color: white;
+}
+
+.start-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:active {
+    background-color: #5f626d;
+    color: white;
+}
+
+.store-title {
+    text-align: left;
+    font-size: 25px;
+    position: relative;
+}
+
+.nova {
+    color: white;
+}
+
+.construye {
+    color: #ffe714;
+}
+
+@media (max-width: 768px) {
+    .store-title {
+        font-size: 20px;
+    }
+    .store {
+        left: 80px;
+        top: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .store-title {
+        font-size: 18px;
+    }
+    .store {
+        left: 60px;
+        top: 24px;
+    }
+}

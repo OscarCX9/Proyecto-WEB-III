@@ -1,0 +1,563 @@
+/* GENERAL */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #e2e2e2;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* HEADER */
+  .header {
+    background-color: #303331;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .store-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .store-title span.electronics {
+    color: white;
+  }
+  
+  .store-title span.store {
+    color: #ffe714;
+  }
+  
+  /* SEARCH BAR */
+  .search-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .search-button,
+  .cart-button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+/*MODIFICACION*/
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.novelties-section {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  height: 102%;
+  scroll-behavior: smooth;
+}
+/*MODIFICACION*/
+
+  /* CONTENEDOR PRINCIPAL */
+  .categorias-container {
+    flex: 1;
+    display: flex;
+    background-color: #000;
+    overflow-y: auto;
+  }
+  
+  /*.main-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }*/
+  
+  /* SIDEBAR */
+  /*.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 260px;
+    flex-shrink: 0;
+  }*/
+  
+  .category-button {
+    background-color: #fdd72b;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+  }
+  
+  .category-button:hover {
+    background-color: #ff9216;
+    color: white;
+  }
+  
+  /* PRODUCTOS */
+  /*.novelties-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }*/
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* siempre 4 columnas */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+  
+  /*.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100%;
+  }*/
+  
+  .product-card {
+    width: 100%;
+    max-width: 215px;
+    min-height: 355px; /* altura fija */
+    background-color: #535353;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
+  /*.product-card {
+    background-color: #111;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+  }*/
+  
+  .product-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product-name {
+    color: #FFD700;
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .tooltip {
+    color: #ccc;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .info-button {
+    background-color: #34d425;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: auto;
+  }
+  
+  .info-button:hover {
+    background-color: #FFD700;
+    color: white;
+  }
+  
+  .subcategory-section {
+    margin-bottom: 40px;
+  }
+  
+  .subcategory-title {
+    color: #2e2b2b;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2e2b2b;
+    padding-bottom: 5px;
+  }
+  
+
+  
+
+/*MEDIFICADO*/
+  .pedido-form {
+  background-color: #f9f9f9;
+  border: 2px solid #60c0f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #333;
+  width: 90%;
+  max-width: 600px;
+}
+
+.pedido-form h2 {
+  color: #60c0f5;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pedido-form input[type="number"] {
+  width: 80px;
+  padding: 5px;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-button {
+  background-color: #ff5050;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #d93a3a;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #39ff14;
+}
+
+
+
+/*modificado*/
+/* 🔹 Fondo del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 🔹 Contenedor del modal */
+.modal-contenido {
+  background: #2b2b2b;
+  padding: 25px 35px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.3s ease;
+  position: relative;
+}
+
+/* 🔹 Animación */
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🔹 Botón cerrar */
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cerrar-modal:hover {
+  color: red;
+}
+
+/* 🔹 Botones dentro del modal */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.cancel-button {
+  background-color: #ff0404;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #ca1717;
+}
+
+
+.colortexto1{
+  color:#ffe714
+}
+.colortexto2{
+  color:#ffe714
+}
+
+
+
+/*.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabla-pedidos th, .tabla-pedidos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tabla-pedidos th {
+  background-color: #f3d023;
+  color: black;
+}*/
+
+/* 🔹 Centrar y ajustar el modal */
+.modal-contenido2 {
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 770px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* 🔹 Centrar la tabla dentro del modal */
+.tabla-pedidos {
+  margin: 20px auto; /* centra horizontalmente */
+  border-collapse: collapse;
+  width: 90%; /* hace que quede más proporcionado */
+  text-align: center;
+}
+
+/* 🔹 Cabecera con fondo */
+.tabla-pedidos thead th {
+  background-color: #f3d023;
+  color: black;
+  padding: 10px;
+  border: 2px solid #444;
+}
+
+/* 🔹 Celdas normales */
+.tabla-pedidos td {
+  padding: 10px;
+  border: 2px solid #444;
+}
+
+/* 🔹 Ajustar botones en tabla */
+.tabla-pedidos button {
+  width: 100px;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔹 Centrar los botones de cerrar */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+
+/*SE MEDIFICO AQUI*/
+
+/* ========================
+   FORMULARIO REGISTRAR USUARIO
+   ========================*/
+
+   
+  
+   .form-registro4 {
+    width: 45%;
+    max-width: 450px;
+    margin: auto;
+    background: #f2f2f2;
+    padding: 12px;              /* 🔥 Antes 18–25px, ahora más compacto */
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Reducir separación entre elementos */
+  .form-registro4 label {
+    margin-bottom: 2px;         /* 🔥 Antes 5–10px */
+    font-size: 14px;
+  }
+  
+  /* Inputs más compactos */
+  .form-registro4 input,
+  .form-registro4 select {
+    padding: 6px;               /* 🔥 Antes 10px */
+    font-size: 14px;
+    margin-bottom: 8px;         /* 🔥 Antes 12–15px */
+  }
+  
+  /* Texto de fuerza de contraseña más pequeño */
+  .form-registro4 p {
+    margin: 4px 0;              /* 🔥 Reduce espacio vertical */
+    font-size: 13px;
+    color: #000;
+  }
+  
+  /* Botón más compacto */
+  .form-registro4 .category-button {
+    padding: 8px;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  
+
+
+   
+  
+  .form-registro4 h2 {
+    text-align: center;
+    margin-bottom: -10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  
+  
+  
+  
+  /* Efecto cuando haces click */
+  .form-registro4 input:focus,
+  .form-registro4 select:focus {
+    border-color: #f3d023;
+    box-shadow: 0 0 6px rgba(243, 208, 35, 0.8);
+  }
+  
+  
+  .form-registro4 .category-button:hover {
+    background-color: #e0be20;
+  }
+  
+  /* Mensaje */
+  .form-registro4 p:last-child {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .tabla-listado {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2b2b2b;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .tabla-listado th, .tabla-listado td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .tabla-listado th {
+    background-color: #f3d023;
+    color: black;
+  }
+
+  .btn-eliminar {
+    background-color: #f3d023;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .btn-eliminar:hover {
+    background-color: #f9fd06;
+  }
+
+  .h2-grafico{
+color: black;
+  }
